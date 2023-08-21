@@ -44,7 +44,7 @@
             <!-------------- Kitchenware container ------------->
             <div class="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-3">
                 <!-- Kitchenware item-1 -->
-                <div class="space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
+                <div class="item space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
                     <div class="bg-[#F1F1F1;] p-5 rounded-2xl">
                         <img class="mx-auto" src="./images/prod1.png" alt=""> 
                     </div>
@@ -59,12 +59,12 @@
                             </div>
                         </div>
 
-                            <h3 class="text-2xl font-bold">K. Accessories </h3>
+                            <h3 id="product-name" class="text-2xl font-bold">K. Accessories </h3>
 
                         <div class="">
-                            <h3 class="text-4xl font-black text-orange-400"><span>39.00</span> TK</h3>
+                            <p class="text-4xl font-black text-orange-400"><span id="item-price">39.00</span> TK</p>
                             <!-- button  -->
-                            <button class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
+                            <button id="btn-shop-now" onclick="handleClickButton(this)" class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline font-medium ">
 
@@ -77,7 +77,7 @@
 
                 </div>
                 <!-- Kitchenware item-2 -->
-                <div class="space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
+                <div class="item space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
                     <div class="bg-[#F1F1F1;] p-5 rounded-2xl">
                         <img class="mx-auto" src="./images/prod2.png" alt=""> 
                     </div>
@@ -92,12 +92,12 @@
                             </div>
                         </div>
 
-                            <h3 class="text-2xl font-bold">K. Accessories </h3>
+                            <h3 id="product-name" class="text-2xl font-bold">Bread Maker</h3>
 
                         <div class="">
-                            <h3 class="text-4xl font-black text-orange-400"><span>25.00</span> TK</h3>
+                            <p class="text-4xl font-black text-orange-400"><span id="item-price">25.00</span> TK</p>
                             <!-- button  -->
-                            <button class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
+                            <button id="btn-shop-now" onclick="handleClickButton(this)" class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline font-medium ">
 
@@ -110,7 +110,7 @@
 
                 </div>
                 <!-- Kitchenware item-3 -->
-                <div class="space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
+                <div class="item space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
                     <div class="bg-[#F1F1F1;] p-5 rounded-2xl">
                         <img class="mx-auto" src="./images/prod3.png" alt=""> 
                     </div>
@@ -125,12 +125,12 @@
                             </div>
                         </div>
 
-                            <h3 class="text-2xl font-bold">Home Cooker</h3>
+                            <h3 id="product-name" class="text-2xl font-bold">Home Cooker</h3>
 
                         <div class="">
-                            <h3 class="text-4xl font-black text-orange-400"><span>49.00</span> TK</h3>
+                            <p class="text-4xl font-black text-orange-400"><span id="item-price">49.00</span> TK</p>
                             <!-- button  -->
-                            <button class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
+                            <button id="btn-shop-now" onclick="handleClickButton(this)" class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline font-medium ">
 
@@ -145,21 +145,23 @@
                 
             </div>
             </section>
-    
+        
         <!------------- Card section start here ----------------------->
 
             <section class="md:w-1/4 py-10 px-3 ml-3 sm:flex-none bg-[#A1CCD1]">
-    <div>
-        <h4>Have coupon?</h4>
-        <div class="flex mt-4">           
-            <input type="text" id="coupon-code-input-field" placeholder="Coupon code" class="input input-bordered w-full max-w-xs uppercase"  />
-            <button id="apply-button" class="btn btn-apply bg-[#E527B2] uppercase text-white font-medium" >Apply</button>
-        </div>
-    </div>
+            <div>
+                <h4>Have coupon?</h4>
+                <div class="flex mt-4">           
+                    <input type="text" id="coupon-code-input-field" placeholder="Coupon code" class="input input-bordered w-full max-w-xs uppercase"  />
+                    <button id="coupon-apply-btn" class="btn btn-apply disabledBtn bg-[#E527B2] uppercase text-white font-medium" disabled>Apply</button>
+                </div>
+            </div>
 
     <div class="mt-5">
-        <div>
-            <h4>Items Name:</h4>
+        <div id="selected-items">
+           <!-- <h2> Selected Items Name:</h2>
+            <p id="selected-item-name"></p>
+            <p id="selected-item-price"></p> -->
         </div>
         <hr>
         <div>
@@ -171,7 +173,7 @@
         <!-- Modal area start -->
         <div class="text-center mx-auto mt-5">
             <!-- Open the modal using ID.showModal() method -->
-            <button id="apply-button" class="btn btn-apply bg-[#E527B2] text-white font-medium w-full" onclick="my_modal_5.showModal()">Make Purchase</button>
+            <button id="purchase-btn" class="btn btn-apply bg-[#E527B2] text-white font-medium w-full" onclick="my_modal_5.showModal()">Make Purchase</button>
 
             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                 <form method="dialog" class="modal-box">
@@ -183,7 +185,7 @@
                     <p class="py-4 text-2xl">You Purchase the Products, Thank You!</p>
                     <div class="modal-action justify-center items-center">
                     <!-- if there is a button in form, it will close the modal -->
-                    <button class="btn btn-apply bg-[#E527B2] text-white font-medium onclick='location.reload();'">Go Home</button>
+                    <button id="reload-button" onclick="reloadPage()" class="btn btn-apply bg-[#E527B2] text-white font-medium">Go Home</button>
                     </div>
                 </form>
             </dialog>
@@ -192,16 +194,16 @@
 
     </div>
 
+        
             </section>
         </section>
-
         <!------------ Sportswear section start here -------------->
         <section class="w-3/4 py-12 ml-3 mx-auto">
             <h3 class="text-4xl font-bebas">Sportswear</h3>
             <!-------------- Sportswear container ------------->
             <div class="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-3">
                 <!-- Sportswear item-1 -->
-                <div class="space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
+                <div class="item space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
                     <div class="bg-[#F1F1F1;] p-5 rounded-2xl">
                         <img class="mx-auto" src="./images/prod4.png" alt=""> 
                     </div>
@@ -216,12 +218,12 @@
                             </div>
                         </div>
 
-                            <h3 class="text-2xl font-bold">Sports Back Cap </h3>
+                            <h3 id="product-name" class="text-2xl font-bold">Sports Back Cap </h3>
 
                         <div class="">
-                            <h3 class="text-4xl font-black text-orange-400"><span>49.00</span> TK</h3>
+                            <p class="text-4xl font-black text-orange-400"><span id="item-price">49.00</span> TK</p>
                             <!-- button  -->
-                            <button class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
+                            <button id="btn-shop-now" onclick="handleClickButton(this)" class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline font-medium ">
 
@@ -234,7 +236,7 @@
 
                 </div>
                 <!-- Sportswear item-2 -->
-                <div class="space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
+                <div class="item space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
                     <div class="bg-[#F1F1F1;] p-5 rounded-2xl">
                         <img class="mx-auto" src="./images/prod5.png" alt=""> 
                     </div>
@@ -249,12 +251,12 @@
                             </div>
                         </div>
 
-                            <h3 class="text-2xl font-bold">Full Jersey Set </h3>
+                            <h3 id="product-name" class="text-2xl font-bold">Full Jersey Set </h3>
 
                         <div class="">
-                            <h3 class="text-4xl font-black text-orange-400"><span>69.00</span> TK</h3>
+                            <p class="text-4xl font-black text-orange-400"><span id="item-price">69.00</span> TK</p>
                             <!-- button  -->
-                            <button class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
+                            <button id="btn-shop-now" onclick="handleClickButton(this)" class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline font-medium ">
 
@@ -267,7 +269,7 @@
 
                 </div>
                 <!-- Sportswear item-3 -->
-                <div class="space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
+                <div class="item space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
                     <div class="bg-[#F1F1F1;] p-5 rounded-2xl">
                         <img class="mx-auto" src="./images/prod6.png" alt=""> 
                     </div>
@@ -282,12 +284,12 @@
                             </div>
                         </div>
 
-                            <h3 class="text-2xl font-bold">Sports cates</h3>
+                            <h3 id="product-name" class="text-2xl font-bold">Sports cates</h3>
 
                         <div class="">
-                            <h3 class="text-4xl font-black text-orange-400"><span>159.00</span> TK</h3>
+                            <p class="text-4xl font-black text-orange-400"><span id="item-price">159.00</span> TK</p>
                             <!-- button  -->
-                            <button class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
+                            <button id="btn-shop-now" onclick="handleClickButton(this)" class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline font-medium ">
 
@@ -309,7 +311,7 @@
             <!-------------- Furniture container ------------->
             <div class="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-3">
                 <!-- Furniture item-1 -->
-                <div class="space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
+                <div class="item space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
                     <div class="bg-[#F1F1F1;] p-5 rounded-2xl">
                         <img class="mx-auto" src="./images/prod7.png" alt=""> 
                     </div>
@@ -324,12 +326,12 @@
                             </div>
                         </div>
 
-                            <h3 class="text-2xl font-bold">Single Relax Chair </h3>
+                            <h3 id="product-name" class="text-2xl font-bold">Single Relax Chair </h3>
 
                         <div class="">
-                            <h3 class="text-4xl font-black text-orange-400"><span>185.00</span> TK</h3>
+                            <p class="text-4xl font-black text-orange-400"><span id="item-price">185.00</span> TK</p>
                             <!-- button  -->
-                            <button class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
+                            <button id="btn-shop-now" onclick="handleClickButton(this)" class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline font-medium ">
 
@@ -342,7 +344,7 @@
 
                 </div>
                 <!-- Furniture item-2 -->
-                <div class="space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
+                <div class="item space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
                     <div class="bg-[#F1F1F1;] p-5 rounded-2xl">
                         <img class="mx-auto" src="./images/prod8.png" alt=""> 
                     </div>
@@ -357,12 +359,12 @@
                             </div>
                         </div>
 
-                            <h3 class="text-2xl font-bold">Children play </h3>
+                            <h3 id="product-name" class="text-2xl font-bold">Children play </h3>
 
                         <div class="">
-                            <h3 class="text-4xl font-black text-orange-400"><span>299.00</span> TK</h3>
+                            <p class="text-4xl font-black text-orange-400"><span id="item-price">299.00</span> TK</p>
                             <!-- button  -->
-                            <button class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
+                            <button id="btn-shop-now" onclick="handleClickButton(this)" class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline font-medium ">
 
@@ -375,7 +377,7 @@
 
                 </div>
                 <!-- Furniture item-3 -->
-                <div class="space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
+                <div class="item space-y-3 drop-shadow-lg p-2 text-center bg-[#D2E9E9] rounded-2xl">
                     <div class="bg-[#F1F1F1;] p-5 rounded-2xl">
                         <img class="mx-auto" src="./images/prod9.png" alt=""> 
                     </div>
@@ -390,12 +392,12 @@
                             </div>
                         </div>
 
-                            <h3 class="text-2xl font-bold">Flexible Sofa</h3>
+                            <h3 id="product-name" class="text-2xl font-bold">Flexible Sofa</h3>
 
                         <div class="">
-                            <h3 class="text-4xl font-black text-orange-400"><span>339.00</span> TK</h3>
+                            <p class="text-4xl font-black text-orange-400"><span id="item-price">339.00</span> TK</p>
                             <!-- button  -->
-                            <button class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
+                            <button id="btn-shop-now" onclick="handleClickButton(this)" class="py-4 px-5 bg-[#E527B2] uppercase text-white font-medium rounded-lg">
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline font-medium ">
 
